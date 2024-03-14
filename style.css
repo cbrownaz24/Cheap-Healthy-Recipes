@@ -1,0 +1,316 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+#title-text {
+  font-family: "Copperplate", sans-serif;
+  color: white;
+}
+
+#search-background {
+  background-image: url("https://i.ibb.co/WVGTK9N/search-Background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding: 25px;
+}
+
+#upper-half {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.card-container {
+  z-index: 0;
+}
+
+#search-bar {
+  border:  2px solid white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  margin: 0 5px 0 5px;
+}
+
+/* .card-container {
+  margin-top: 75px;
+}
+ */
+.hidden {
+  display: none;
+}
+
+.fa-plus, .fa-x, .fa-rotate-right {
+  cursor: pointer;
+}
+
+.fa-x {
+  color: red;
+}
+
+.fa-magnifying-glass {
+  font-size: 20px;
+  margin: 10px 20px 0 10px;
+}
+
+.card.is-fullwidth {
+  margin-bottom: 10px;
+}
+
+.dropdown-content {
+  max-height: 13em;
+  overflow: auto;
+}
+
+.dropdown-item {
+  cursor: pointer;
+}
+
+.nutrient {
+  margin-bottom: 10px;
+}
+
+#inputs {
+  margin: auto;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+#food-section {
+  margin-top: 50px;
+}
+
+#about-main-body {
+  padding-top: 100px;
+  background-image: url('https://tse1.mm.bing.net/th?id=OIP.Xd2y7d9dQ6YY62VCETrjogHaE4&pid=Api&P=0');
+  width:100%;
+}
+
+.food-image {
+  height: 80px;
+  width: auto;
+  margin: 4px;
+}
+
+.modal-card-body {
+  min-height: 50%;
+}
+
+.modal-card, .modal-content {
+  width: 920px!important;
+/*   overflow: visible!important; */
+  background-color: white;
+}
+
+.nutrient::placeholder {
+  color: grey;
+}
+
+#about-text {
+  text-align: center;
+}
+
+#returned-h1 {
+  margin-top: -25px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#minCalories {
+  order: 1;
+}
+
+#maxCalories {
+  order: 2;
+}
+
+#minCarbs {
+  order: 3;
+}
+
+#maxCarbs {
+  order: 4;
+}
+
+#minProtein {
+  order: 5;
+}
+
+#maxProtein {
+  order: 6;
+}
+
+#minFat {
+  order: 7;
+}
+
+#maxFat {
+  order: 8;
+}
+
+#minCaffeine {
+  order: 9;
+}
+
+#maxCaffeine {
+  order: 10;
+}
+
+#minCopper {
+  order: 11;
+}
+
+#maxCopper {
+  order: 12;
+}
+
+#minCalcium {
+  order: 13;
+}
+
+#maxCalcium {
+  order: 14;
+}
+
+#minCholesterol {
+  order: 15;
+}
+
+#maxCholesterol {
+  order: 16;
+}
+
+#minSaturatedFat {
+  order: 17;
+}
+
+#maxSaturatedFat {
+  order: 18;
+}
+
+#minVitaminA {
+  order: 19;
+}
+
+#maxVitaminA {
+  order: 20;
+}
+
+#minVitaminC {
+  order: 21;
+}
+
+#maxVitaminC {
+  order: 22;
+}
+
+#minVitaminD {
+  order: 23;
+}
+
+#maxVitaminD {
+  order: 24;
+}
+
+#minVitaminE {
+  order: 25;
+}
+
+#maxVitaminK {
+  order: 26;
+}
+
+#minVitaminB1 {
+  order: 27;
+}
+
+#maxVitaminB1 {
+  order: 28;
+}
+
+#minVitaminB2 {
+  order: 29;
+}
+
+#maxVitaminB2 {
+  order: 30;
+}
+
+#minVitaminB5 {
+  order: 31;
+}
+
+#maxVitaminB5 {
+  order: 32;
+}
+
+#minVitaminB3 {
+  order: 33;
+}
+
+#maxVitaminB6 {
+  order: 34;
+}
+
+#minVitaminB12 {
+  order: 35;
+}
+
+#maxVitaminB12 {
+  order: 36;
+}
+
+#minFiber {
+  order: 37;
+}
+
+#maxFiber {
+  order: 38;
+}
+
+#minIron {
+  order: 39;
+}
+
+#maxIron {
+  order: 40;
+}
+
+#minMagnesium {
+  order: 41;
+}
+
+#maxMagnesium {
+  order: 42;
+}
+
+#minPotassium {
+  order: 43;
+}
+
+#maxPotassium {
+  order: 44;
+}
+
+#minSodium {
+  order: 45;
+}
+
+#maxSodium {
+  order: 46;
+}
+
+#minSugar {
+  order: 47;
+}
+
+#maxSugar {
+  order: 48;
+}

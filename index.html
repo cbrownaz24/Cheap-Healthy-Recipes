@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>TimelyHealth</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!--   Bulma Styling -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+  <!--   FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/8492da4a96.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <div id="upper-half">
+    <nav class="navbar is-info" id="header" role="navigation" aria-label="main navigation"></nav>
+  
+    <div id="search-background">
+      <div class="search-container">
+        <div class="columns">
+          <div id="search-bar" class="columns column is-10 is-offset-1">
+            <i class="fa-solid fa-magnifying-glass" style="color:white;"></i>
+            <div id="meal-type-dropdown" class="dropdown">
+              <div class="dropdown-trigger">
+                <button class="button search" aria-haspopup="true" aria-controls="dropdown-menu">
+                  <span id="default-meal-dropdown-text">Meal Type</span>
+                  <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </button>
+    
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                <div class="dropdown-content">
+                  <a id="main-course" class="dropdown-item">
+                    Main Course
+                  </a>
+                  <a id="side-dish" class="dropdown-item">
+                    Side Dish
+                  </a>
+                  <a id="dessert" class="dropdown-item">
+                    Dessert
+                  </a>
+                  <a id="appetizer" class="dropdown-item">
+                    Appetizer
+                  </a>
+                  <a id="salad" class="dropdown-item">
+                    Salad
+                  </a>
+                  <a id="breakfast" class="dropdown-item">
+                    Breakfast
+                  </a>
+                  <a id="soup" class="dropdown-item">
+                    Soup
+                  </a>
+                  <a id="snack" class="dropdown-item">
+                    Snack
+                  </a>
+                  <hr class="dropdown-divider">
+                  <a id="show-all" class="dropdown-item" data-type="">
+                    Show All
+                  </a>
+                </div>
+              </div>
+            </div>
+    
+            <div id="inputs" class="columns is-multiline is-centered">
+              <input id="maxCalories" class="column is-one-quarter nutrient input is-primary search" type="text"
+                placeholder="Max Calories (kcal)">
+              <input id="maxCarbs" class="column is-one-quarter nutrient input is-primary search" type="text"
+                placeholder="Max Carbs (g)">
+              <input id="minProtein" class="column is-one-quarter nutrient input is-primary search" type="text"
+                placeholder="Min Protein (g)">
+            </div>
+    
+            <button class="button" id="remove-fields" style="border-color: transparent;">
+              <div style="margin:10px; font-size:20px;"><i class="fa-solid fa-rotate-right"></i></div>
+            </button>
+    
+            <div id="additional" class="dropdown">
+              <div class="dropdown-trigger">
+                <button class="button search" aria-haspopup="true" aria-controls="dropdown-menu">
+                  <div style="margin:10px; font-size:20px;"><i class="fa-solid fa-plus"></i></div>
+                </button>
+              </div>
+              <div class="dropdown-menu" id="dropdown-nutrients" role="menu">
+                <div class="dropdown-content">
+                  <a id="minCalories" class="dropdown-item">
+                    Min Calories (kcal)
+                  </a>
+                  <a id="maxCalories" class="dropdown-item is-active">
+                    Max Calories (kcal)
+                  </a>
+                  <a id="minCarbs" class="dropdown-item">
+                    Min Carbs (g)
+                  </a>
+                  <a id="maxCarbs" class="dropdown-item is-active">
+                    Max Carbs (g)
+                  </a>
+                  <a id="minProtein" class="dropdown-item is-active">
+                    Min Protein (g)
+                  </a>
+                  <a id="maxProtein" class="dropdown-item">
+                    Max Protein (g)
+                  </a>
+                  <a id="minFat" class="dropdown-item">
+                    Min Fat (g)
+                  </a>
+                  <a id="maxFat" class="dropdown-item">
+                    Max Fat (g)
+                  </a>
+                  <a id="minCaffeine" class="dropdown-item">
+                    Min Caffeine (mg)
+                  </a>
+                  <a id="maxCaffeine" class="dropdown-item">
+                    Max Caffeine (mg)
+                  </a>
+                  <a id="minCopper" class="dropdown-item">
+                    Min Copper (mg)
+                  </a>
+                  <a id="maxCopper" class="dropdown-item">
+                    Max Copper (mg)
+                  </a>
+                  <a id="minCalcium" class="dropdown-item">
+                    Min Calcium (mg)
+                  </a>
+                  <a id="maxCalcium" class="dropdown-item">
+                    Max Calcium (mg)
+                  </a>
+                  <a id="minCholesterol" class="dropdown-item">
+                    Min Cholesterol (mg)
+                  </a>
+                  <a id="maxCholesterol" class="dropdown-item">
+                    Max Cholesterol (mg)
+                  </a>
+                  <a id="minSaturatedFat" class="dropdown-item">
+                    Min Saturated Fat (g)
+                  </a>
+                  <a id="maxSaturatedFat" class="dropdown-item">
+                    Max Saturated Fat (g)
+                  </a>
+                  <a id="minVitaminA" class="dropdown-item">
+                    Min Vitamin A (mg)
+                  </a>
+                  <a id="maxVitaminA" class="dropdown-item">
+                    Max Vitamin A (mg)
+                  </a>
+                  <a id="minVitaminC" class="dropdown-item">
+                    Min Vitamin C (mg)
+                  </a>
+                  <a id="maxVitaminC" class="dropdown-item">
+                    Max Vitamin C (mg)
+                  </a>
+                  <a id="minVitaminD" class="dropdown-item">
+                    Min Vitamin D (mg)
+                  </a>
+                  <a id="maxVitaminD" class="dropdown-item">
+                    Max Vitamin D (mg)
+                  </a>
+                  <a id="minVitaminE" class="dropdown-item">
+                    Min Vitamin E (mg)
+                  </a>
+                  <a id="maxVitaminE" class="dropdown-item">
+                    Max Vitamin E (mg)
+                  </a>
+                  <a id="minVitaminK" class="dropdown-item">
+                    Min Vitamin K (mg)
+                  </a>
+                  <a id="maxVitaminK" class="dropdown-item">
+                    Max Vitamin K (mg)
+                  </a>
+                  <a id="minVitaminB1" class="dropdown-item">
+                    Min Vitamin B1 (mg)
+                  </a>
+                  <a id="maxVitaminB1" class="dropdown-item">
+                    Max Vitamin B1 (mg)
+                  </a>
+                  <a id="minVitaminB2" class="dropdown-item">
+                    Min Vitamin B2 (mg)
+                  </a>
+                  <a id="maxVitaminB2" class="dropdown-item">
+                    Max Vitamin B2 (mg)
+                  </a>
+                  <a id="minVitaminB5" class="dropdown-item">
+                    Min Vitamin B5 (mg)
+                  </a>
+                  <a id="maxVitaminB5" class="dropdown-item">
+                    Max Vitamin B5 (mg)
+                  </a>
+                  <a id="minVitaminB3" class="dropdown-item">
+                    Min Vitamin B3 (mg)
+                  </a>
+                  <a id="maxVitaminB3" class="dropdown-item">
+                    Max Vitamin B3 (mg)
+                  </a>
+                  <a id="minVitaminB6" class="dropdown-item">
+                    Min Vitamin B6 (mg)
+                  </a>
+                  <a id="maxVitaminB6" class="dropdown-item">
+                    Max Vitamin B6 (mg)
+                  </a>
+                  <a id="minVitaminB12" class="dropdown-item">
+                    Min Vitamin B12 (mg)
+                  </a>
+                  <a id="maxVitaminB12" class="dropdown-item">
+                    Max Vitamin B12 (mg)
+                  </a>
+                  <a id="minFiber" class="dropdown-item">
+                    Min Fiber (g)
+                  </a>
+                  <a id="maxFiber" class="dropdown-item">
+                    Max Fiber (g)
+                  </a>
+                  <a id="minIron" class="dropdown-item">
+                    Min Iron (mg)
+                  </a>
+                  <a id="maxIron" class="dropdown-item">
+                    Max Iron (mg)
+                  </a>
+                  <a id="minMagnesium" class="dropdown-item">
+                    Min Magnesium (mg)
+                  </a>
+                  <a id="maxMagnesium" class="dropdown-item">
+                    Max Magnesium (mg)
+                  </a>
+                  <a id="minPotassium" class="dropdown-item">
+                    Min Potassium (mg)
+                  </a>
+                  <a id="maxPotassium" class="dropdown-item">
+                    Max Potassium (mg)
+                  </a>
+                  <a id="minSodium" class="dropdown-item">
+                    Min Sodium (mg)
+                  </a>
+                  <a id="maxSodium" class="dropdown-item">
+                    Max Sodium (mg)
+                  </a>
+                  <a id="minSugar" class="dropdown-item">
+                    Min Sugar (g)
+                  </a>
+                  <a id="maxSugar" class="dropdown-item">
+                    Max Sugar (g)
+                  </a>
+                </div>
+              </div>
+            </div>
+    
+    
+            <button id="submit-categories" class="button is-info search">Submit</button>
+          </div>
+          <div id="recipe-1" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+              <header class="modal-card-head">
+                <p class="modal-card-title">Modal title</p>
+                <button class="delete" aria-label="close"></button>
+              </header>
+              <section class="modal-card-body">
+                <!-- Content ... -->
+              </section>
+              <footer class="modal-card-foot">
+                <button class="button is-success">Save changes</button>
+                <button class="button">Cancel</button>
+              </footer>
+            </div>
+          </div>
+    
+    <!--       <button class="js-modal-trigger" data-target="recipe-1">
+            Open JS example modal
+          </button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="foods" class="hidden">
+    <section id="food-section">
+      <h1 id="returned-h1" class="has-text-centered" style="margin-bottom:15px;">Our Choices</h1>
+      <h2 id="returned-h2" class="has-text-centered" style="margin-top: -10px; margin-bottom: 15px">Select your preferences above to find foods that fit your plan.</h2>
+      <h3 id="returned-h3" class="has-text-centered" style="margin-top: -10px; margin-bottom: 15px"></h3>
+      <h3 id="returned-none" class="has-text-centered" style="margin-top: -10px; margin-bottom: 15px"></h3>
+      <div class="card-container">
+        <!-- Cards placed in here -->
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
